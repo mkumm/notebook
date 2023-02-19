@@ -1,7 +1,9 @@
 bigger(ant, flea).
 bigger(mouse, ant).
 bigger(cat, mouse).
-bigger(horse, cat).
+bigger(aneta, cat).
+bigger(mike, aneta).
+bigger(horse, mike).
 bigger(whale, horse).
 
 bigger_than(A, B) :- bigger(A, B).
