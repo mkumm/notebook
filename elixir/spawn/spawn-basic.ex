@@ -1,5 +1,5 @@
 defmodule SpawnBasic do
   def greet do
-    IO.puts "Hello"
+    IO.puts("Hello")
   end
 end
