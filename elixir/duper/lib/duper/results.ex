@@ -24,12 +24,13 @@ defmodule Duper.Results do
   end
 
   def handle_call(:find_duplicates, _from, results) do
-    {:reply, hash_with_more_than_one_path(results), results}
-  end)
+    {:reply, hashes_with_more_than_one_path(results), results}
+  end
 
-  defp hashese_with_more_than_one_path(results) do
+  defp hashes_with_more_than_one_path(results) do
     results
-    |> Enum.filter(fn {_hash, paths} -> length(paths_ > 1 end)
+    |> Enum.filter(fn {_hash, paths} -> length(paths) > 1 end)
     |> Enum.map(&elem(&1, 1))
   end
+
 end
